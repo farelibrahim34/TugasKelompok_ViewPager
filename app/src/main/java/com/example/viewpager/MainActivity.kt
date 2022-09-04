@@ -2,12 +2,13 @@ package com.example.viewpager
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.viewpager.widget.ViewPager
 import com.example.viewpager.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class MainActivity : AppCompatActivity() {
 
+class MainActivity : AppCompatActivity() {
     lateinit var binding : ActivityMainBinding
     lateinit var viewPagerAdapter : ViewPagerAdapter
 
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         viewPagerAdapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
 
         with(binding){
-             viewPager.adapter = viewPagerAdapter
+            viewPager.adapter = viewPagerAdapter
 
             TabLayoutMediator(tabLayout, viewPager){ tab, position ->
                 when(position){
@@ -30,8 +31,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }.attach()
         }
-
-
 
 
     }

@@ -9,7 +9,6 @@ import android.view.ViewGroup
 
 class ChatsFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -17,6 +16,4 @@ class ChatsFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_chats, container, false)
     }
-
-
 }
